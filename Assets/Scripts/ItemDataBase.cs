@@ -2,13 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemDataBase : MonoBehaviour
+[CreateAssetMenu(fileName = "ItemData_", menuName = "Data/ItemData", order = 1)]
+public class ItemDataBase : ScriptableObject
 {
-    public static ItemDataBase instance;
-
-    private void Awake()
-    {
-        instance = this; 
-    }
-    public List<Item> itemDB = new List<Item>(); 
+    public string itemName;
+    public int price;
+    public bool isEquiped;
+    public Sprite image;
 }

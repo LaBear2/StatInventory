@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
 {
-    public GameObject inventoryPanel;
+    public GameObject InventoryPanel;
     bool activeInventory = false;
 
     private void Start()
     {
-        inventoryPanel.SetActive(activeInventory);
+        InventoryPanel.SetActive(activeInventory);
     }
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I))
         {
             activeInventory = !activeInventory;
-            inventoryPanel.SetActive(activeInventory);
+            InventoryPanel.SetActive(activeInventory);
         }
     }
 }
